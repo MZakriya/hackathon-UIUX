@@ -1,64 +1,47 @@
+// components/Navbar.js
+import React from "react";
+import { FiUser, FiSearch, FiHeart, FiShoppingCart } from "react-icons/fi";
 import Link from "next/link";
-import { Heart } from "lucide-react";
-import { Search } from "lucide-react";
-import { ShoppingCart } from "lucide-react";
-export default function Navbar() {
+
+const Navbar = () => {
   return (
-    <header className="bg-white shadow-sm border-b mx-auto flex flex-col w-[1440px]">
-      <div className="bg-black text-white py-2 text-sm flex justify-between items-center px-8 w-full">
-        <div className="flex-1 items-center">
-          Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!
-          <Link href="#" className="underline hover-text-slate-300">
-            {""}
-            Shop Now
-            {""}
-          </Link>
-        </div>
-        <div className="flex items-center gap-[2px]">
-          <select
-            name=""
-            id=""
-            className="bg-black text-white text-sm font-normal leading-[21px]"
-          >
-            <option value="">English</option>
-            <option value="">Urdu</option>
-            <option value="">Punjabi</option>
-            <option value="">Hindi</option>
-            <option value="">Arabic</option>
-          </select>
-        </div>
-      </div>
-      {/* {/*Main Nav */}
-      <div className="flex justify-between items-center px-20 py-4">
-        <h1 className="text-2xl font-bold text-black">Exclusive</h1>
-        <nav className="hidden md:flex space-x-8 items-center">
-          <Link href="/" className="text-slate-600 hover:text-black underline">
-            Home
-          </Link>
-          <Link href="/" className="text-slate-600 hover:text-black ">
-            Contact
-          </Link>
-          <Link href="/" className="text-slate-600 hover:text-black ">
-            About
-          </Link>
-          <Link href="/" className="text-slate-600 hover:text-black ">
-            Sign Up
-          </Link>
-        </nav>
-        {/* {Search Icon} */}
-        <div className="flex items-center space-x-6">
-          <div className="hidden lg:flex items-center bg-slate-100 rounded-md px-3 py-2">
-            <input
-              type="text"
-              placeholder="What are you looking for?"
-              className="bg-slate-100 outline-none text-sm"
-            />
-            <Search />
+    <nav className="bg-white shadow-md">
+      <div className="container mx-auto px-4 flex justify-between items-center py-4">
+        {/* Logo Section */}
+        <div className="flex items-center">
+          <div className="text-2xl font-bold text-black flex items-center">
+          <img src="./images/logo.png" width={50} height={50} alt="Furniro" />Furniro
           </div>
-          <Heart />
-          <ShoppingCart />
+        </div>
+
+        {/* Menu Items */}
+        <ul className="hidden md:flex space-x-6 text-sm font-medium text-gray-700">
+          <li className="hover:text-black cursor-pointer"><Link href="/">Home</Link></li>
+          <li className="hover:text-black cursor-pointer"><Link href="/shop">Shop</Link></li>
+          <li className="hover:text-black cursor-pointer"><Link href="/blog">Blog</Link></li>
+          <li className="hover:text-black cursor-pointer"><Link href="/contact">Contact</Link></li>
+        </ul>
+
+        {/* Icons Section */}
+        <div className="flex items-center space-x-4">
+          <FiUser className="text-xl text-gray-700 hover:text-black cursor-pointer" />
+          <FiSearch className="text-xl text-gray-700 hover:text-black cursor-pointer" />
+          <FiHeart className="text-xl text-gray-700 hover:text-black cursor-pointer" />
+          <FiShoppingCart className="text-xl text-gray-700 hover:text-black cursor-pointer" />
+        </div>
+
+        {/* Mobile Menu Button */}
+        <div className="md:hidden flex items-center">
+          <button
+            type="button"
+            className="text-gray-700 focus:outline-none hover:text-black"
+          >
+            ☰
+          </button>
         </div>
       </div>
-    </header>
+    </nav>
   );
-}
+};
+
+export default Navbar;
