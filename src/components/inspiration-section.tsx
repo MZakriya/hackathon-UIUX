@@ -32,7 +32,7 @@ export default function InspirationSection() {
 
   return (
     <section className="py-12 lg:py-16">
-      <div className="container px-4 md:px-6">
+      <div className="bg-[#FCF8F3] container px-4 md:px-6">
         <div className="grid gap-12 lg:grid-cols-2">
           <div className="flex flex-col justify-center">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
