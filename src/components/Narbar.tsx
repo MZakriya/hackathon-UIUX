@@ -80,7 +80,9 @@ const Navbar = () => {
             <FiUser />
             <FiSearch />
             <FiHeart />
+            <Link href={"/components/shopping-cart"}>
             <FiShoppingCart />
+            </Link>
           </div>
         </div>
       )}
