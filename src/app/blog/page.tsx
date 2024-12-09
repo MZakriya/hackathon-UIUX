@@ -3,8 +3,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import { ChevronRight, SlidersHorizontal, Grid, List } from "lucide-react";
-import ShopButtom from "@/components/Shop-buttom";
-
+import Pagination from "@/components/pagination";
+import Features from "@/components/features";
 
 export default function Blog() {
   
@@ -37,7 +37,12 @@ export default function Blog() {
           </nav>
         </div>
       </div>
-      <ShopButtom />
+      <div className="space-y-12">
+      {/* Other shop content */}
+      <Pagination currentPage={1} totalPages={3} />
+      <Features />
+      </div>
+    
       </div>
   );
 }

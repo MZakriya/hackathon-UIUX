@@ -1,9 +1,8 @@
 import Image from "next/image";
-import ShopImage from "/public/images/shop.png";
 import ProductCard from "@/components/product-card";
 import ShopHeader from "@/components/shop-header";
-import ShopButtom from "@/components/Shop-buttom";
-
+import Pagination from "@/components/pagination";
+import Features from "@/components/features";
 
 export default function ShopHero() {
   const products = [
@@ -146,15 +145,14 @@ export default function ShopHero() {
               <ProductCard key={product.name} {...product} />
             ))}
           </div>
-
-          <div className="mt-12 text-center">
-            <button className="inline-flex items-center justify-center border border-[#B88E2F] bg-white px-8 py-2 text-sm font-medium text-[#B88E2F] transition-colors hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2">
-              Show More
-            </button>
-          </div>
         </div>
       </section>
-      <ShopButtom />
+      <div className="space-y-12">
+      {/* Other shop content */}
+      <Pagination currentPage={1} totalPages={3} />
+      <Features />
+      </div>
+    
     </>
   );
 }
