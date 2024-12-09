@@ -1,4 +1,3 @@
-import Image from "next/image";
 import ProductCard from "@/components/product-card";
 import ShopHeader from "@/components/shop-header";
 import Pagination from "@/components/pagination";

@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { ChevronRight, SlidersHorizontal, Grid, List } from "lucide-react";
+import { ChevronRight} from "lucide-react";
 import Pagination from "@/components/pagination";
 import Features from "@/components/features";
 

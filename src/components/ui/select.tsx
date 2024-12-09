@@ -72,7 +72,6 @@ export function SelectContent({ children }: { children: React.ReactNode }) {
 }
 
 export function SelectItem({
-  value,
   children,
   onClick,
 }: {
