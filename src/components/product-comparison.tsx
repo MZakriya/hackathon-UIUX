@@ -18,55 +18,6 @@ const generalSpecs: ProductSpec[] = [
   { label: "Upholstery Color", value1: "Bright Grey & Iron", value2: "Bright Grey & Iron" },
 ];
 
-const productSpecs: ProductSpec[] = [
-  { label: "Filling Material", value1: "Foam", value2: "None" },
-  { label: "Finish Type", value1: "Bright Grey & Iron", value2: "Bright Grey & Iron" },
-  { label: "Adjustable Headrest", value1: "No", value2: "Yes" },
-  { label: "Maximum Load Capacity", value1: "280 KG", value2: "300 KG" },
-  { label: "Origin of Manufacture", value1: "India", value2: "India" },
-];
-
-const dimensionSpecs: ProductSpec[] = [
-  { label: "Width", value1: "265.32 cm", value2: "265.32 cm" },
-  { label: "Height", value1: "76 cm", value2: "76 cm" },
-  { label: "Depth", value1: "167.38 cm", value2: "167.38 cm" },
-  { label: "Weight", value1: "45 KG", value2: "45 KG" },
-  { label: "Seat Height", value1: "40.52 cm", value2: "41.52 cm" },
-  { label: "Leg Height", value1: "5.46 cm", value2: "5.46 cm" },
-];
-
-const warrantySpecs: ProductSpec[] = [
-  {
-    label: "Warranty Summary",
-    value1: "1 Year Manufacturing Warranty",
-    value2: "12 Year Manufacturing Warranty",
-  },
-  {
-    label: "Warranty Service Type",
-    value1:
-      "For Warranty Claims Or Any Product Related Issues Please Email at help@xyz.com",
-    value2:
-      "For Warranty Claims Or Any Product Related Issues Please Email at help@xyz.com",
-  },
-  {
-    label: "Covered in Warranty",
-    value1: "Warranty Against Manufacturing Defect",
-    value2: "Warranty of the product is limited to manufacturing defects only",
-  },
-  {
-    label: "Not Covered in Warranty",
-    value1:
-      "The Warranty Does Not Cover Any Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage.",
-    value2:
-      "The Warranty Does Not Cover Any Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage.",
-  },
-  {
-    label: "Domestic Warranty",
-    value1: "1 Year",
-    value2: "3 Months",
-  },
-];
-
 export default function ProductComparison() {
   return (
     <div className="container mx-auto px-4 py-8">
@@ -136,9 +87,6 @@ export default function ProductComparison() {
         {/* Specifications */}
         <div className="space-y-8 text-center md:text-left">
           <h3 className="font-medium text-lg">General</h3>
-          <h3 className="font-medium text-lg">Product</h3>
-          <h3 className="font-medium text-lg">Dimensions</h3>
-          <h3 className="font-medium text-lg">Warranty</h3>
         </div>
 
         {/* Product 1 Specs */}
@@ -170,4 +118,3 @@ export default function ProductComparison() {
     </div>
   );
 }
- 

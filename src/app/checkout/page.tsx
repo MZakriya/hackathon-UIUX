@@ -4,7 +4,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { ChevronRight } from "lucide-react";
 import Features from "@/components/features";
-import ProductComparison from "@/components/product-comparison";
 
 export default function Checkout() {
   return (
@@ -23,7 +22,7 @@ export default function Checkout() {
 
         {/* Overlay Content */}
         <div className="relative text-center space-y-4 px-4">
-          <img
+          <Image
             src="./images/logo.png"
             width={77}
             height={77}

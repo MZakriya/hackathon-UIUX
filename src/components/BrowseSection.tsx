@@ -1,4 +1,4 @@
-
+import Image from "next/image";
   // components/BrowseSection.js
   export default function BrowseSection() {
     const categories = [
@@ -20,7 +20,7 @@
                 key={index}
                 className="bg-white shadow overflow-hidden group"
               >
-                <img
+                <Image
                   src={category.img}
                   alt={category.name}
                   className="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"

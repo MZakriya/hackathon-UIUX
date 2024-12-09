@@ -1,3 +1,4 @@
+import Image from "next/image";
 // components/HeroSection.js
 export default function HeroSection() {
   return (
@@ -5,7 +6,7 @@ export default function HeroSection() {
       <div className="relative overflow-x-hidden">
         {/* Container for the image */}
         <div className="relative w-full">
-          <img
+          <Image
             src="/images/home-hero.jpeg"
             alt="Furniture Collection"
             width={1440}

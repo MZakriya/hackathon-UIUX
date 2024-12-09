@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { FiUser, FiSearch, FiHeart, FiShoppingCart } from "react-icons/fi";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import Link from "next/link";
+import Image from "next/image";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,8 +19,14 @@ const Navbar = () => {
         {/* Logo Section */}
         <div className="flex items-center">
           <div className="text-2xl font-bold text-black flex items-center">
-            <img src="./images/logo.png" width={50} height={50} alt="Furniro" />
-            Furniro
+            <Image 
+              src="/images/logo.png" 
+              width={50} 
+              height={50} 
+              alt="Furniro" 
+              priority 
+            />
+            <span className="ml-2">Furniro</span>
           </div>
         </div>
 
@@ -81,7 +88,7 @@ const Navbar = () => {
             <FiSearch />
             <FiHeart />
             <Link href={"/components/shopping-cart"}>
-            <FiShoppingCart />
+              <FiShoppingCart />
             </Link>
           </div>
         </div>
