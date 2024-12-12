@@ -24,7 +24,7 @@ export default function Contact() {
         {/* Overlay Content */}
         <div className="  relative text-center space-y-4">
           <Image
-            src="./images/logo.png"
+            src="/images/logo.png"
             width={77}
             height={77}
             className="pt"

@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { Trash2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useRouter } from "next/navigation";
 
 interface CartItem {
   id: string;
@@ -25,6 +26,7 @@ const initialCartItems: CartItem[] = [
 
 export default function CartPage() {
   const [cartItems, setCartItems] = useState<CartItem[]>(initialCartItems);
+  const router = useRouter();
 
   const updateQuantity = (id: string, quantity: number) => {
     setCartItems((items) =>
@@ -121,9 +123,14 @@ export default function CartPage() {
                   Rs. {subtotal.toLocaleString()}
                 </span>
               </div>
-              <Button className="w-full mt-6 bg-white hover:bg-gray-50 text-gray-900 border border-gray-200">
-                Check Out
-              </Button>
+              <div>
+      <Button
+        className="w-full mt-6 bg-white hover:bg-gray-50 text-gray-900 border border-gray-200"
+        onClick={() => router.push("/checkout")}
+      >
+        Check Out
+      </Button>
+    </div>
             </div>
           </div>
         </div>

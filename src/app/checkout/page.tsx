@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ChevronRight } from "lucide-react";
 import Features from "@/components/features";
+import CheckoutForm from "@/components/checkout-form";
 
 export default function Checkout() {
   return (
@@ -23,7 +24,7 @@ export default function Checkout() {
         {/* Overlay Content */}
         <div className="relative text-center space-y-4 px-4">
           <Image
-            src="./images/logo.png"
+            src="/images/logo.png"
             width={77}
             height={77}
             alt="Furniro"
@@ -39,6 +40,10 @@ export default function Checkout() {
           </nav>
         </div>
       </div>
+      <main className="min-h-screen bg-white">
+      <CheckoutForm />
+    </main>
+  
       {/* Features Section */}
       <div className="space-y-12 px-4 py-8 sm:space-y-8 sm:py-6">
         <Features />
