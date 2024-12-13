@@ -1,9 +1,9 @@
 "use client"
 
 import Image from "next/image"
-import { Lock, X } from 'lucide-react'
+import { Lock, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { useRouter } from "next/navigation";
+import { useRouter } from "next/navigation"
 
 interface CartItem {
   id: string
@@ -11,6 +11,7 @@ interface CartItem {
   image: string
   quantity: number
   price: number
+  productPageUrl: string // Add this field for linking
 }
 
 const cartItems: CartItem[] = [
@@ -19,32 +20,32 @@ const cartItems: CartItem[] = [
     name: "Asgaard sofa",
     image: "/images/sofa-main.png",
     quantity: 1,
-    price: 250000.00
+    price: 250000.0,
+    productPageUrl: "/products/asgaard-sofa", // Example product page
   },
   {
     id: "2",
     name: "Casaliving Wood",
     image: "/images/cart2.jpeg",
     quantity: 1,
-    price: 270000.00
-  }
+    price: 270000.0,
+    productPageUrl: "", // No link for other products
+  },
 ]
 
 export default function ShoppingCart1() {
-  const subtotal = cartItems.reduce((sum, item) => sum + (item.price * item.quantity), 0)
-  const router = useRouter();
-  
-  const handleCart = () => {
-    router.push("/cart");
-  };
+  const subtotal = cartItems.reduce(
+    (sum, item) => sum + item.price * item.quantity,
+    0
+  )
+  const router = useRouter()
 
-  const handleCheckout = () => {
-    router.push("/checkout");
-  };
-
-  const handleComparison = () => {
-    router.push("/Comparison");
-  };
+  const handleFirstProductClick = () => {
+    const firstProduct = cartItems[0] // Get the first product
+    if (firstProduct.productPageUrl) {
+      router.push(firstProduct.productPageUrl) // Navigate to the first product's page
+    }
+  }
 
   return (
     <div className="absolute top-12 right-0 z-50 w-80 sm:w-96 rounded-lg bg-white p-4 shadow-lg">
@@ -54,8 +55,14 @@ export default function ShoppingCart1() {
       </div>
 
       <div className="divide-y">
-        {cartItems.map((item) => (
-          <div key={item.id} className="flex items-center gap-4 py-4">
+        {cartItems.map((item, index) => (
+          <div
+            key={item.id}
+            className={`flex items-center gap-4 py-4 ${
+              index === 0 ? "cursor-pointer" : "" // Make only the first product clickable
+            }`}
+            onClick={index === 0 ? handleFirstProductClick : undefined} // Only attach the click handler for the first product
+          >
             <div className="relative h-16 w-16 flex-shrink-0 overflow-hidden rounded-lg bg-[#F9F1E7]">
               <Image
                 src={item.image}
@@ -98,21 +105,21 @@ export default function ShoppingCart1() {
         <Button
           variant="outline"
           className="w-full"
-          onClick={handleCart} 
+          onClick={() => router.push("/cart")} // Ensure Cart button works
         >
           Cart
         </Button>
         <Button
           variant="outline"
           className="w-full"
-          onClick={handleCheckout}
+          onClick={() => router.push("/checkout")} // Ensure Checkout button works
         >
           Checkout
         </Button>
         <Button
           variant="outline"
           className="w-full"
-          onClick={handleComparison}
+          onClick={() => router.push("/Comparison")} // Ensure Comparison button works
         >
           Comparison
         </Button>
