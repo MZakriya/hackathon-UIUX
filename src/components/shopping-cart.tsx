@@ -29,7 +29,7 @@ const cartItems: CartItem[] = [
     image: "/images/cart2.jpeg",
     quantity: 1,
     price: 270000.0,
-    productPageUrl: "", // No link for other products
+    productPageUrl: "", 
   },
 ]
 

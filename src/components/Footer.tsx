@@ -29,10 +29,10 @@ export default function Footer() {
           <div className="space-y-6">
             <h3 className="text-base font-medium text-gray-500">Links</h3>
             <nav className="flex flex-col space-y-4">
-              <Link href="#" className="text-base text-gray-600 hover:text-gray-900">Home</Link>
-              <Link href="#" className="text-base text-gray-600 hover:text-gray-900">Shop</Link>
-              <Link href="#" className="text-base text-gray-600 hover:text-gray-900">About</Link>
-              <Link href="#" className="text-base text-gray-600 hover:text-gray-900">Contact</Link>
+              <Link href="/" className="text-base text-gray-600 hover:text-gray-900">Home</Link>
+              <Link href="/shop" className="text-base text-gray-600 hover:text-gray-900">Shop</Link>
+              <Link href="" className="text-base text-gray-600 hover:text-gray-900">About</Link>
+              <Link href="contact" className="text-base text-gray-600 hover:text-gray-900">Contact</Link>
             </nav>
           </div>
 
