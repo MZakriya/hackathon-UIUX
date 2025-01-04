@@ -17,7 +17,7 @@ export default function HeroSection() {
         </div>
 
         {/* Left content */}
-        <div className="heroText bg-[#FFF3E3] hidden md:block w-[34rem] absolute top-[25%] left-[50%] transform -translate-x-[50%] rounded-[6px] p-[4rem]">
+        <div className="heroText bg-[#FFF3E3] hidden md:block w-[34rem] absolute top-[30%] left-[75%] transform -translate-x-[50%] rounded-[6px] p-[4rem]">
           <p className="text-gray-500 uppercase font-medium text-sm mb-2">
             New Arrival
           </p>
