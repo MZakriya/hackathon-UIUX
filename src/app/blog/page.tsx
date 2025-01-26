@@ -57,12 +57,12 @@ export default function Blog() {
         />
 
         {/* Overlay Content */}
-        <div className="  relative text-center space-y-4">
+        <div className=" flex flex-col justify-center space-y-2">
           <Image
             src="/images/logo.png"
-            width={77}
-            height={77}
-            className="pt"
+            width={60}
+            height={60}
+            className=""
             alt="Furniro"
           />
           <h1 className="text-4xl font-medium text-gray-900">Blog</h1>

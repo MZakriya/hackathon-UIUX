@@ -34,7 +34,7 @@ export default function HeroSection() {
         </div>
 
         {/* Mobile content */}
-        <div className="md:hidden absolute bottom-[20%] left-1/2 transform -translate-x-1/2 w-full p-4 bg-[#FFF3E3] text-center rounded-lg">
+        <div className="md:hidden absolute bottom-[10%] left-1/2 transform -translate-x-1/2 w-full p-4 bg-[#FFF3E3] text-center rounded-lg">
           <p className="text-gray-500 uppercase font-medium text-sm mb-2">
             New Arrival
           </p>
