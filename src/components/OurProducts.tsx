@@ -5,7 +5,6 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { client } from "@/sanity/lib/client";
 
-
 interface Product {
   _id: string;
   title: string;
@@ -15,7 +14,7 @@ interface Product {
   slug: string;
 }
 
-export default function Our() {
+export default function ProductSection() {
   const [visibleProductsCount, setVisibleProductsCount] = useState(4); // Initially show 4 products
   const [products, setProducts] = useState<Product[]>([]); // State for products
 
@@ -45,7 +44,8 @@ export default function Our() {
   const handleShowMore = () => {
     setVisibleProductsCount((prevCount) =>
       Math.min(prevCount + 4, products.length)
-    ); // Ensure it doesn't exceed total products
+    );
+    // Ensure it doesn't exceed total products
   };
 
   return (
