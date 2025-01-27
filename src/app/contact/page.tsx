@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { ChevronRight} from "lucide-react";
-import Features from "@/components/features";
+import FeatureSection from "@/components/feacturesSection";
 import ContactSection from "@/components/contact-section";
 
 export default function Contact() {
@@ -45,7 +45,7 @@ export default function Contact() {
       </div>
       <div className="space-y-12">
 
-      <Features />
+      <FeatureSection/>
       </div>
     </div>
   );

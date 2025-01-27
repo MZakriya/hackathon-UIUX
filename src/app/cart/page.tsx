@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ChevronRight } from "lucide-react";
 import CartPage from "@/components/cart-page";
-import Features from "@/components/features";
+import FeatureSection from "@/components/feacturesSection";
 
 export default function Cart() {
   return (
@@ -48,7 +48,7 @@ export default function Cart() {
 
       {/* Features Section */}
       <div className="space-y-12 px-4 py-8 sm:space-y-8 sm:py-6">
-        <Features />
+      <FeatureSection/>
       </div>
     </div>
   );

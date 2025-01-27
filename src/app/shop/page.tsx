@@ -5,6 +5,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { client } from "@/sanity/lib/client";
+import ShopHeader from "@/components/shop-header";
 import FeatureSection from "@/components/feacturesSection";
 
 interface Product {
@@ -87,6 +88,8 @@ function ProductSection() {
     );
 
   return (
+    <div>
+    <ShopHeader />
     <div className="min-h-screen bg-gray-100">
       <div className="container mx-auto px-4 py-6">
         <header
@@ -210,6 +213,7 @@ function ProductSection() {
         </div>
       </div>
       <FeatureSection/>
+    </div>
     </div>
   );
 }

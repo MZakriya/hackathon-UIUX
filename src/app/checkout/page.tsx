@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { ChevronRight } from "lucide-react";
-import Features from "@/components/features";
+import FeatureSection from "@/components/feacturesSection";
 import CheckoutForm from "@/components/checkout-form";
 
 export default function Checkout() {
@@ -46,7 +46,7 @@ export default function Checkout() {
   
       {/* Features Section */}
       <div className="space-y-12 px-4 py-8 sm:space-y-8 sm:py-6">
-        <Features />
+      <FeatureSection/>
       </div>
     </div>
   );
